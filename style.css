@@ -3,4 +3,102 @@ body,
 html {
     margin: 0;
     padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 10px none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Barra de navegação com a lista */
+header nav ul,
+header nav {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    gap: 20px;
+}
+
+/* link  da lista */
+header nav li a {
+    color: black;
+    text-decoration: none;
+    border: 3px rgb(255, 186, 57)solid;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+
+
+#heroSection {
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#heroSection h2 {
+
+    align-self: flex-start;
+    margin-bottom: 2rem;
+
+}
+
+#heroSection div {
+    display: inline-block;
+    flex-direction: row-reverse;
+    position: relative;
+
+}
+
+
+#heroSection img {
+    border: none;
+    border-radius: 35px;
+    position: relative;
+    object-fit: cover;
+    display: block;
+    /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+.text-overlay {
+    list-style-type: none;
+    font-size: large;
+    position: absolute;
+    /* Tira do fluxo normal para ficar sobre a imagem */
+    right: 0;
+    top: 0;
+    height: 90%;
+    /* Ocupa a altura total da imagem */
+    width: 300px;
+
+
+    z-index: 1;
+    /* A MÁGICA DO ESCURECIMENTO */
+    /* Preto (0,0,0) com 60% de opacidade (0.6) */
+    background-color: rgba(0, 0, 0, 0.6);
+
+    /* A MÁGICA DO BLUR (Desfoque) */
+    /* Aplica um desfoque de 20px no que estiver ATRÁS deste elemento */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* Necessário para funcionar no Safari */
+
+    /* Estilização do Texto */
+    color: white;
+    padding: 40px;
+
 }
